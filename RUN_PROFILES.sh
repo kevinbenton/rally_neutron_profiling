@@ -14,7 +14,7 @@ function kill_neutron {
    while [ -n "$(neutron_procs)" ]; do
        iter_count=$((iter_count+1))
        for pid in $(neutron_procs); do
-           if [[ $itercount -lt 8 ]]; then
+           if [[ $iter_count -lt 8 ]]; then
                kill $pid
            else
                kill -9 $pid
@@ -29,6 +29,15 @@ function start_neutron {
    bash $THIS_DIR/reset.sh >> $LOG_DIR/rally_neutron_server.log 2>&1
    source $NEUTRON_DIR/.tox/py27/bin/activate
    python $NEUTRON_DIR/.tox/py27/bin/neutron-server --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugins/ml2/ml2_conf.ini >> $LOG_DIR/rally_neutron_server.log 2>&1 &
+   local iter_count=0;
+   nc -z localhost 9696
+   while [ $? -ne 0 ]; do
+       iter_count=$((iter_count+1))
+       sleep 0.25
+       if [[ $iter_count -lt 20 ]]; then
+           nc -z localhost 9696
+       fi
+   done
 }
 
 function switch_to_sha {
