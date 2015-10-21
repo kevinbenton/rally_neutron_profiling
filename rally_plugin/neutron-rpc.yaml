@@ -1,0 +1,35 @@
+# This test exercises the RPC retrieval of ports with security groups.
+#
+# This test depends on a custom class in the neutron rally-scenarios
+# plugins directory. To use it locally, the rpc.py plugin will
+# need to be copied to /etc/rally/plugins/scenarios or
+# ~/.rally/plugins/scenarios as specified in
+# http://rally.readthedocs.org/en/latest/concepts.html#scenarios-plugins
+#
+# This scenario test is kind of funky right now because it requires partial
+# neutron configuration to work and oslo.cfg doesn't support the rally process
+# having it's own config and parsing the neutron.conf config. So for now,
+# the rabbit details for RPC need to be explicitly set here.
+
+---
+  NeutronRPC.rpc_routers_ports_security_groups:
+    -
+      args:
+        number_of_ports_per_network: 2
+        number_of_net_router_sets: 100
+        number_of_sg_rules: 50
+      runner:
+        type: "constant"
+        times: 4
+        concurrency: 1
+      context:
+        users:
+          tenants: 1
+          users_per_tenant: 1
+        quotas:
+          neutron:
+             subnet: -1
+             network: -1
+             port: -1
+             router: -1
+             security_group_rule: -1
