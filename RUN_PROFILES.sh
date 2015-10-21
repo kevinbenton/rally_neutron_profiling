@@ -58,7 +58,7 @@ function run_rally_task {
     rally task start ~/.rally/plugins/neutron-rpc.yaml 2>&1 | tee $LOG_DIR/rally_run_log.log
 }
 
-COMMITS_TO_TARGET=$(awk 'NR == 1 || NR % 20 == 0' $THIS_DIR/ALL_COMMITS_IN_RANGE)
+COMMITS_TO_TARGET=$(cat $THIS_DIR/COMMITS_TO_TARGET)
 
 while read -r line; do
     echo "profiling $line"
