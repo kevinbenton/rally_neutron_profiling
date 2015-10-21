@@ -1,0 +1,79 @@
+9da4dfae56f22414e389bff560a9ee10991e1d7d Merge "Python 3: make post_test_hook work with more tox targets"
+f3ccc38c88c0c479046b155eefbff51a22d59e0a Merge "Add pointers to access Neutron test coverage details"
+aa6ec7bf44215d448b493a0eb375225f19884c58 Merge "Mock oslo policy HTTPCheck instead of urllib"
+c979ddce24e926846d84fb654fe0e7fcf4c54c80 Merge "Add a patch scope section to 'effective neutron'"
+82866276b0cf7a10cbb9f5e92a12680b096a3770 Merge "Deprecate branchless migration chains from neutron-db-manage"
+75ec30f6502b57bc9832aabf37c23429c07aa492 Merge "Remove log decorator deprecated in Liberty"
+e639a6b522fa2d7bbfd1fe9b1f7fa90e411b853e Merge "Handle empty bridge case in OVSBridge.get_ports_attributes"
+ec9a634893eb1acafa42b4a4676f9e37789bbdba Merge "ml2: don't consider drivers with no bind_port for qos supported rule types"
+7e647b1df3d6e67d4cf1af29f4eda0f48ccd6eb0 Merge "Optimize if statement in dvr_local_router.py"
+d4ca8b521ca0ba3b8f2ea16fb4d2425b7f07ede0 Merge "Log exception.msg before exception.message" into feature/pecan
+548f323f594d6b3e43ad0e16deced9fc491e1e60 Merge "Fix TypeError caused by delete_agent_gateway_port()"
+baf2d9f44fa93f3c614928569cf267852f09e2f8 Merge "Restore reservations in API controller"
+cb5498f62ff22e25bce2693711b233217472e486 Merge "SR-IOV: devstack support for SR-IOV agent"
+27e516a4dae7a5330423c707aab3ff8a9e44b106 Merge "Handle process disappearing before we ask for its PPID"
+ab8ed7597ec1081b16cbb7979ee478986fdf3e3c Merge "Add constraint target to tox.ini"
+397fc4dcb5500537077848078fa4a1cc3fa913e6 Merge "Enable py34 tests for pluggable ipam backend"
+da765c939beac320c7233127f4bc4277c610eaf2 Merge "Add network to SubnetContext"
+cc49b7d7d9e8ba32cb7f4e9635ea20a7b7266b9b Merge "IPv6 display suitable message when MTU is invalid on iface"
+2a4152745eda0b6a48584f11c5587b403113e327 Merge "Add empty policy rule to get_rule_type action"
+149f269b7d6f68536d8e9e3802252d7f76b490f8 Merge "Make models_v2 explicitly import rbac_db_models"
+a230b73e3fb79b3621c0d4e2d3e619f03026d6cf Merge "neutron-db-manage: sync HEADS file with 'current' output"
+6eaac2bf4ac2cdaab3587a3a07c96cd8a2d9e235 Merge "Add missing tenant_id validation in RESOURCE_ATTRIBUTE_MAP"
+3513a79a935b6dba3ed01e3d31ebd276502a6b95 Merge "Updated from global requirements"
+bf800f9c6cec7ca012b8f16ea93e4bb1453017a2 Merge "Break down _bind_port_if_needed in ML2"
+b1a8a8bc4741cc7534f8c498cafdc993468d63e2 Merge "Add test that checks external tables are not changed"
+43166cc4c5ce7bcc4d7585ee990dc59814e64a1f Merge "SR-IOV: Add Agent QoS driver to support bandwidth limit" into feature/qos
+c4a1a4f5cea9fc0b1e130da812e66c56467f59a3 Merge "Pass the extension driver exception to plugin"
+4aa8574f8d00f42afe9173af5630369d3ab7e804 Merge "Do not delete fip namespace during l3 dvr agent resync"
+d8b04854b410b8c88eeab82975db131c650cda2b Merge "Python 3: convert dict_keys object to list"
+6ee7b12d9494ca972d05a73ca000f1167d32c617 Merge "Add DNS and DHCP log into dhcp agent"
+c1ec571c824b893243001ab63c83ca8659312d92 Merge "Fix accessing shared policies, add assoc tests" into feature/qos
+ca1705f1bc40d0f73d23b80937014edc07557a12 Merge "Update dhcp agent cache for network:dhcp ports"
+9c49e771f5fc5565e58fbd56e99b484ef844455f Merge "rpc.callbacks.registry: validate that callback provider is registered" into feature/qos
+20f099150f928e40254b660e1fa03f36a62c31b3 Merge "Add Pluggable IPAM Backend Part 2"
+d3708de0cb1dacc610bc9585a55dd260a862104d Merge remote-tracking branch 'origin/feature/qos' into merge-branch
+919947bdb2890d2296ef816863a16cbb4da8fec9 Merge "objects.rule: enable database tests for QosRule" into feature/qos
+09e0a03832a068f50f12e19eafd8a62066dda6bd Merge "Make Daemon pidfile arg optional"
+8d31cba969193a817b88361860ea3db726a0da7a Merge "Fix SR-IOV mechanism driver tests directory"
+656721987b0f62de2e31782ca03611ae5afa7cd8 Merge "Use _is_this_snat_host and remove _get_gw_port_host"
+215c7663c7246a556348cb699836381b4eafb6cd Merge "Move DVR related method to proper class"
+25064f2ab990ea72888daf19dee08a163ad59b44 Merge "Introduce the AFTER_READ callback for ports and networks" into feature/qos
+1a0bbc537e2924104a4c62e7665121344978e03c Merge "Support Basic Address Scope CRUD as extensions"
+4fa3c0619df7fff5e9abca04d54c6413db74bfa9 Merge "Fix subnet updating failure on valid allocation pools"
+df611ee53232a1f86a0f060975a78630e891a74c Merge "Fix Consolidate sriov agent and driver code"
+cde607e05d2f05495699d7d38c6723085c667ef7 Merge "Don't process network_delete events on OVS agent"
+043829d4c3068f7d8e758629959a95bcd601ade5 Merge "Use string exception casting everywhere"
+d34e2c913c87f39fa856b70b01ef0242a7461e95 Merge "Python3: do not set Request.body to a text string"
+356e50645045e0ac14d64cb9b28c076c95b8a946 Merge "DHCP agent: Set an "ipxe" tag to work with Ironic"
+2c166bb442852e18931208b1fd8bf05086520104 Merge "Refactor TestRpcWorker and TestWorkerService"
+60e4fe1d48db68e5bc35eb1c85187655fd19d822 Merge "Enable all deprecation warnings for test runs"
+0fb46a0580b599c6f74b7dcf77c4d01cef202dea Merge "Python 3: use next() instead of iterator.next()"
+66bc9deba859946ed34bb5b9e789ef228e534e8e Merge "ML2: Remove TYPE_MULTI_SEGMENT"
+e15997d7ec7404e97c837b5889471cef4668db05 Merge "Enhance utils.ensure_dir to be resilient to concurrent workers"
+206426e75269e77c406fbfd51cdca453be8f4368 Merge "Don't delete port from bridge on delete_port event"
+d476473fe8b988e3069f5dc1b9d1d95aadb6a707 Merge "Cleanup stale metadata processes on l3 agent sync"
+7de7df280bf44a699906217e1552f8a12824185e Merge "OVS_LIB support API for setting fail mode 'standalone'"
+044a0f3122744452413cebd28c3ba77be7761bab Merge "Remove use of contextlib.nested"
+41e289af36c8a8e0fab530d628ee7ea79f67b5b3 Merge "Optimize IptablesManager._find_last_entry"
+73886cba73ab50dcdd76976d297281e8646440a1 Merge "mlnx MD: mlnx_direct removal"
+3d168d12c07e21b565ab103e445c0e1a99d7c0d7 Merge "Add missed actions into policy.json"
+195799fb5da4ed4338fbd2480841dd44d7b51628 Merge "Add some tests for floating ips"
+bdf78cd45e1ded8fa2a1dc87a4f05631e319178c Merge "Imported Translations from Transifex"
+e61447d55ab7b647b5201000488f83173be9baa2 Merge "Don't resync on DHCP agent setup failure"
+41d47cb252530dfa10e9af06b318e97a344cb28b Merge "tests: confirm that _output_hosts_file does not log too often" into stable/kilo
+ed209643f110204894edb801e0795ff39b4d7df2 Merge "Remove neutron.tests.common.agents package"
+9e0d0132205ab2fa2e9df38ddecf75b58bed0ebd Merge "Revert connection option post full-stack tests"
+949f6e23b3e0af79c89d6ebb1a5add0a64f62028 Merge "Adds DVR functional test for multi-external networks"
+f4a2a7d9c7eca441577e57fae7c75aa1b069d066 Merge "Improves the  description string for the config parameter metadata_workers."
+d179328a5250e83b4f632a3923f892b160a7315e Merge "Fix dynamic arp populate error for dvr routers"
+3f45031d685a60abc3df293430db1ca458bc5620 Merge "Allow metadata proxy to log with nobody user/group"
+bcb2054de03888064fc8aa1b02a94db939725a57
+26284228dfc3c5f121f869dd6b2d2a492afaf659
+4b1bc776f581ec97b8b021728e79ec3c29823865
+5d427e225e7127dce66905d027728fda64e3fa03
+27ab8e619324a212b54c431a9837cebe8beb3618
+b9d48c92542b0e8e90d1fe497bc45e221748bce5
+145e0052d6a9d995da88940fdddcac016d23448a
+ebb3c3f732d3fd0e227627175945c188bcf0a5cd
+822a488976ba6bf75ce89fff18992ad53ca7f326
