@@ -2,9 +2,11 @@
 
 THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 COMMITS_TO_TARGET=$(awk 'NR == 1 || NR % 20 == 0' $THIS_DIR/ALL_COMMITS_IN_RANGE)
+# let's try everything!
+COMMITS_TO_TARGET=$(tac $THIS_DIR/ALL_COMMITS_IN_RANGE)
 
 echo "$COMMITS_TO_TARGET" > "$THIS_DIR/COMMITS_TO_TARGET"
-
+exit
 # correct filter field
 echo "820199b23b6941e9628b85825539fb1cea51164f" >> "$THIS_DIR/COMMITS_TO_TARGET"
 

@@ -2,7 +2,7 @@
 set -x
 
 THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-LOG_DIR=${THIS_DIR}/logs/
+LOG_DIR=/mnt/logs/
 NEUTRON_DIR=/opt/stack/neutron/
 
 function neutron_procs {
@@ -34,15 +34,24 @@ function start_neutron {
    while [ $? -ne 0 ]; do
        iter_count=$((iter_count+1))
        sleep 0.25
-       if [[ $iter_count -lt 20 ]]; then
+       if [[ $iter_count -lt 30 ]]; then
            nc -z localhost 9696
        fi
    done
+   if [[ $iter_count -lt 30 ]]; then
+   # we want to make sure RPC is working right or fail early
+   if [ $(curl -I localhost:18888/l3/get_routers/1 2>/dev/null | head -n 1 | cut -d$' ' -f2) -ne 200 ]; then
+       kill_neutron
+   fi
+   fi
 }
 
 function switch_to_sha {
    cd $NEUTRON_DIR
-   git checkout $1
+   git reset --hard
+   git clean -fd
+   # if we can't checkout we have to bail because the repo is borked
+   git checkout $1 || exit
 }
 
 function check_sha_profiled {
